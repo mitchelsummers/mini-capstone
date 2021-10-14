@@ -4,7 +4,12 @@ class ProductsController < ApplicationController
     render json: all_products
   end
   def product_parameter_id
-    id_value = params["id"]
+    id_value = params[:id]
+    product_id = Product.find_by(id: "#{id_value}")
+    render json:  product_id
+  end
+  def product_query_parameter_id
+    id_value = params[:id]
     product_id = Product.find_by(id: "#{id_value}")
     render json:  product_id
   end
