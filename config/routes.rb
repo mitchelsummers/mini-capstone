@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   get "/products_all" => "products#products_all"
-  get "/product_random" => "products#product_random"
+  get "/product_parameter_id/:id" => "products#product_parameter_id"
 end
