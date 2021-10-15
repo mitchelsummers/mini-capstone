@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get "/products_all" => "products#products_all"
-  get "/product_parameter_id/:id" => "products#product_parameter_id"
+  get "/products" => "products#index"
+  get "/products/:id" => "products#show"
   get "/product_query_parameter_id" => "products#product_query_parameter_id"
+
+  post "/body_params" => "products#body_params"
 end

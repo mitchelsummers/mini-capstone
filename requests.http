@@ -1,0 +1,10 @@
+POST http://localhost:3000/body_params.json
+content-type: application/json
+
+{
+  "data": "data"
+}
+
+###
+GET http://localhost:3000/products/
+Content-Type: application/json
