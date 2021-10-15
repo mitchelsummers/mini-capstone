@@ -1,4 +1,43 @@
-POST http://localhost:3000/body_params.json
+GET http://localhost:3000/products.json
+Content-Type: application/json
+
+###
+
+POST http://localhost:3000/products.json
+Content-Type: application/json
+
+{
+  "name": "hat", 
+  "price": "15", 
+  "image_url": "https://i5.walmartimages.com/asr/4626dbee-c555-4c70-a86d-9c965710b99f_1.563c198cddc9f4f0fd3180366552bae9.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF", 
+  "description": "goes on your head"
+}
+
+###
+GET http://localhost:3000/products/2.json
+Content-Type: application/json
+
+
+###
+PATCH http://localhost:3000/products/4.json
+Content-Type: application/json
+
+{
+  "image_url": "https://i5.walmartimages.com/asr/4626dbee-c555-4c70-a86d-9c965710b99f_1.563c198cddc9f4f0fd3180366552bae9.jpeg?odnHeight=612"
+}
+
+###
+
+DELETE http://localhost:3000/products/:id.json
+Content-Type: application/json
+
+{
+  
+}
+
+###
+
+POST http://localhost:3000/body_params/
 content-type: application/json
 
 {
@@ -6,5 +45,3 @@ content-type: application/json
 }
 
 ###
-GET http://localhost:3000/products/
-Content-Type: application/json
