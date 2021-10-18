@@ -12,29 +12,26 @@ class ProductsController < ApplicationController
       description: params["description"]
     )
     product.save
-    render json: product.as_json
+    render json: product
   end
 
   def show
-    input = params["id"]
-    product = Product.find_by(id: input)
-    render json: product.as_json(methods:[:is_discounted?, :tax, :total])
+    product = Product.find_by(id: params[:id])
+    render json: product
   end
 
   def update
-    input = params["id"]
-    product = Product.find_by(id: input)
+    product = Product.find_by(id: params[:id])
     product.name = params["name"] || product.name
     product.price = params["price"] || product.price
     product.image_url = params["image_url"] || product.image_url
     product.description = params["description"] || product.description
     product.save
-    render json: product.as_json
+    render json: product
   end
 
   def destroy
-    input = params["id"]
-    product = Product.find_by(id: input)
+    product = Product.find_by(id: params[:id])
     product.destroy
     render json: {message: "product destroyed"}
   end
