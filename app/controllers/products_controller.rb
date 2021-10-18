@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
   def show
     input = params["id"]
     product = Product.find_by(id: input)
-    render json: product
+    render json: product.as_json(methods:[:is_discounted?, :tax, :total])
   end
 
   def update
