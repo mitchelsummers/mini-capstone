@@ -9,10 +9,10 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "name": "hat", 
-  "price": "15", 
-  "image_url": "https://i5.walmartimages.com/asr/4626dbee-c555-4c70-a86d-9c965710b99f_1.563c198cddc9f4f0fd3180366552bae9.jpeg?odnHeight=612", 
-  "description": "goes on your head"
+  "name": "water bottle", 
+  "price": "20", 
+  "image_url": "https://www.target.com/p/simple-modern-32-oz-stainless-steel-summit-water-bottle-with-straw-lid/-/A-80585632#", 
+  "description": "stores liquid"
 }
 
 ### SHOW
