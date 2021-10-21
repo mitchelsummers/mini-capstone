@@ -44,10 +44,9 @@ POST http://localhost:3000/suppliers.json
 Content-Type: application/json
 
 {
-  "name": "water bottle", 
-  "price": "20", 
-  "image_url": "https://www.target.com/p/simple-modern-32-oz-stainless-steel-summit-water-bottle-with-straw-lid/-/A-80585632#", 
-  "description": "stores liquid"
+  "name": "", 
+  "email": "", 
+  "phone_number": ""
 }
 
 ### SHOW_SUPPLIERS
@@ -60,7 +59,7 @@ PATCH http://localhost:3000/suppliers/7.json
 Content-Type: application/json
 
 {
-  "name": "dress"
+  "name": ""
 }
 
 ### DESTROY_SUPPLIERS
