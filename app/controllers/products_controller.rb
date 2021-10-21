@@ -9,7 +9,8 @@ class ProductsController < ApplicationController
       name: params["name"], 
       price: params["price"], 
       image_url: params["image_url"], 
-      description: params["description"]
+      description: params["description"],
+      supplier_id: params["supplier_id"]
     )
     if product.save
       render json: product
@@ -29,6 +30,7 @@ class ProductsController < ApplicationController
     product.price = params["price"] || product.price
     product.image_url = params["image_url"] || product.image_url
     product.description = params["description"] || product.description
+    product.supplier_id = params["supplier_id"] || product.supplier_id
     if product.save
       render json: product
     else
@@ -41,14 +43,5 @@ class ProductsController < ApplicationController
     product.destroy
     render json: {message: "product destroyed"}
   end
-
-#  def product_query_parameter_id
- #   input = params[:id]
-  #  product_id = Product.find_by(id: input)
-   # render json:  product_id
-  #end
-  #def body_params
-   # input_value = params["data"]
-    #render json: {message: "the blank is #{input_value}"}
-  #end
+  
 end

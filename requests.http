@@ -1,9 +1,9 @@
-### INDEX
+### INDEX_PRODUCTS
 
 GET http://localhost:3000/products.json
 Content-Type: application/json
 
-### CREATE
+### CREATE_PRODUCTS
 
 POST http://localhost:3000/products.json
 Content-Type: application/json
@@ -15,12 +15,12 @@ Content-Type: application/json
   "description": "stores liquid"
 }
 
-### SHOW
+### SHOW_PRODUCTS
 GET http://localhost:3000/products/7.json
 Content-Type: application/json
 
 
-### UPDATE
+### UPDATE_PRODUCTS
 PATCH http://localhost:3000/products/7.json
 Content-Type: application/json
 
@@ -28,18 +28,43 @@ Content-Type: application/json
   "name": "dress"
 }
 
-### DESTROY
+### DESTROY_PRODUCTS
 
 DELETE http://localhost:3000/products/8.json
 Content-Type: application/json
 
-###
+### INDEX_SUPPLIERS
 
-#POST http://localhost:3000/body_params/
-#content-type: application/json
+GET http://localhost:3000/suppliers.json
+Content-Type: application/json
 
-#{
- # "data": "data"
-#}
+### CREATE_SUPPLIERS
 
-###
+POST http://localhost:3000/suppliers.json
+Content-Type: application/json
+
+{
+  "name": "water bottle", 
+  "price": "20", 
+  "image_url": "https://www.target.com/p/simple-modern-32-oz-stainless-steel-summit-water-bottle-with-straw-lid/-/A-80585632#", 
+  "description": "stores liquid"
+}
+
+### SHOW_SUPPLIERS
+GET http://localhost:3000/suppliers/7.json
+Content-Type: application/json
+
+
+### UPDATE_SUPPLIERS
+PATCH http://localhost:3000/suppliers/7.json
+Content-Type: application/json
+
+{
+  "name": "dress"
+}
+
+### DESTROY_SUPPLIERS
+
+DELETE http://localhost:3000/suppliers/8.json
+Content-Type: application/json
+
