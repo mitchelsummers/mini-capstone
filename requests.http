@@ -1,6 +1,7 @@
 ### INDEX_PRODUCTS
 
 GET http://localhost:3000/products.json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjozLCJleHAiOjE2Mjk5OTI4NjR9.G2ExsrDYn3oE0vJkvm4T6Po2GbNpH5cqTEaVPVuK_MA
 Content-Type: application/json
 
 ### CREATE_PRODUCTS
@@ -85,3 +86,34 @@ Content-Type: application/json
   "email": "test@test.com",
   "password": "password"
 }
+### Photos create
+POST http://localhost:3000/index
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjozLCJleHAiOjE2Mjk5OTI4NjR9.G2ExsrDYn3oE0vJkvm4T6Po2GbNpH5cqTEaVPVuK_MA
+Content-Type: application/json
+
+{
+  "product_id": ,
+  "url": ""
+}
+
+### CREATE_order
+
+POST http://localhost:3000/orders.json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzUyNzQ5MjB9.otdf1Yke8QvphapjPLNo1nHCYzQZ57IbdNNR6ei5YwQ
+
+{
+  "product_id": 4, 
+  "quantity": 1
+}
+
+### SHOW_orders
+GET http://localhost:3000/orders/6.json
+Authorization: Bearer 
+Content-Type: application/json
+
+### INDEX_orders
+
+GET http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzUyNzQ5MjB9.otdf1Yke8QvphapjPLNo1nHCYzQZ57IbdNNR6ei5YwQ
+Content-Type: application/json

@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_admin, except: [:index, :show]
+
   def index
     all_products = Product.all
     render json: all_products
@@ -45,3 +47,7 @@ class ProductsController < ApplicationController
   end
 
 end
+    # if current_user
+    # else
+    #   render json: { message: "please sign in" }
+    # end

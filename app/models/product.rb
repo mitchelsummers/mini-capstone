@@ -1,4 +1,7 @@
 class Product < ApplicationRecord
+  has_many :images
+  has_many :orders
+  belongs_to :supplier
   validates :name,  presence: true, uniqueness: true, length: { minimum: 2 }
   validates :image_url,  presence: true
   validates :description, length: { maximum: 500 }
@@ -15,7 +18,6 @@ class Product < ApplicationRecord
   # def supplier
   #   Supplier.find_by(id: supplier_id)
   # end
-  belongs_to :supplier
   def images
     Image.where(product_id: id)
   end
