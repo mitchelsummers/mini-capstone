@@ -1,6 +1,6 @@
 ### INDEX_PRODUCTS
 
-GET http://localhost:3000/products.json
+GET http://localhost:3000/products.json?category=furniture
 # Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjozLCJleHAiOjE2Mjk5OTI4NjR9.G2ExsrDYn3oE0vJkvm4T6Po2GbNpH5cqTEaVPVuK_MA
 Content-Type: application/json
 

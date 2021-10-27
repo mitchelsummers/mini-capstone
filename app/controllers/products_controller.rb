@@ -3,6 +3,10 @@ class ProductsController < ApplicationController
 
   def index
     all_products = Product.all
+    if params[:category]
+      category = Category.find_by(name: params[:category])
+      all_products = category.products
+    end
     render json: all_products
   end
 
