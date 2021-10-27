@@ -1,6 +1,7 @@
 class Product < ApplicationRecord
   has_many :images
   has_many :orders
+  has_many :category_products
   belongs_to :supplier
   validates :name,  presence: true, uniqueness: true, length: { minimum: 2 }
   validates :image_url,  presence: true
